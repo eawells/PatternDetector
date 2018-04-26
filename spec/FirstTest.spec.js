@@ -22,9 +22,16 @@ describe('sensor grid', () => {
             sensorGrid.setPartOnGrid(0,1);
             expect(sensorGrid.grid[0][1]).toBeTruthy();
         });
-        // it('should return true when there is a part', () => {
-        //     var sensorGrid = new SensorGrid();
-        //     expect(sensorGrid.isPartOnGrid(0,0)).toBeTruthy();
-        // });
+    })
+    describe('get part on grid', () => {
+        it('should return true when there is a part on given coordinate', () => {
+            // arrange
+            var sensorGrid = new SensorGrid();
+            sensorGrid.setPartOnGrid(0,0);
+            //act
+            const actual = sensorGrid.isPartOnGrid(0,0);
+            //asert
+            expect(actual).toBeTruthy();
+        });
     })
 })

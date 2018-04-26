@@ -11,6 +11,10 @@ class SensorGrid {
     setPartOnGrid(row, column) {
         this.grid[row][column] = true;
     }
+
+    isPartOnGrid(row, column) {
+        return true;
+    }
 }
 
 if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') )
