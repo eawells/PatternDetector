@@ -33,5 +33,11 @@ describe('sensor grid', () => {
             expect(actual).toBeTruthy();
         });
 
+        it('should return false when there is not a part on a given coordinate', () => {
+            //act
+            const actual = sensorGrid.isPartOnGrid(0,5);
+            //asert
+            expect(actual).toBeFalsy();
+        });
     })
 })

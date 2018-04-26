@@ -13,7 +13,7 @@ class SensorGrid {
     }
 
     isPartOnGrid(row, column) {
-        return true;
+        return this.grid[row][column];
     }
 }
 
