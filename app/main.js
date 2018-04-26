@@ -9,7 +9,7 @@ class SensorGrid {
     }
 
     setPartOnGrid(row, column) {
-        this.grid[0][0] = true;
+        this.grid[row][column] = true;
     }
 }
 
