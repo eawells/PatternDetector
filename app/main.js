@@ -8,16 +8,17 @@ class SensorGrid {
         }
     }
 
-    setPartOnGrid(row, column) {
+    setCoordinateOnGrid(row, column) {
         this.grid[row][column] = true;
     }
 
-    isPartOnGrid(row, column) {
+    hasCoordinateOnGrid(row, column) {
         return this.grid[row][column];
+    }
+
+    partIsCorrectlyPositioned() {
+        return true;
     }
 }
 
-if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') )
-{
-    module.exports = SensorGrid;
-}
+module.exports = SensorGrid;
