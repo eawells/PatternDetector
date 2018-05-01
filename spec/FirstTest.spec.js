@@ -45,6 +45,10 @@ describe('sensor grid', () => {
             setPartOnGrid(true);
             expect(sensorGrid.partIsCorrectlyPositioned()).toBeTruthy();
         });
+        it('should return false when width is 4', () => {
+            setPartOnGrid(false);
+            expect(sensorGrid.partIsCorrectlyPositioned()).toBeFalsy();
+        });
     });
     function setPartOnGrid(correctPosition){
         if(correctPosition){
@@ -52,18 +56,41 @@ describe('sensor grid', () => {
             sensorGrid.setCoordinateOnGrid(4,3);
             sensorGrid.setCoordinateOnGrid(5,3);
             sensorGrid.setCoordinateOnGrid(6,3);
+
             sensorGrid.setCoordinateOnGrid(3,4);
             sensorGrid.setCoordinateOnGrid(4,4);
             sensorGrid.setCoordinateOnGrid(5,4);
             sensorGrid.setCoordinateOnGrid(6,4);
             sensorGrid.setCoordinateOnGrid(7,4);
             sensorGrid.setCoordinateOnGrid(8,4);
+
             sensorGrid.setCoordinateOnGrid(3,5);
             sensorGrid.setCoordinateOnGrid(4,5);
             sensorGrid.setCoordinateOnGrid(5,5);
             sensorGrid.setCoordinateOnGrid(6,5);
             sensorGrid.setCoordinateOnGrid(7,5);
             sensorGrid.setCoordinateOnGrid(8,5);
+        }
+        else{
+            sensorGrid.setCoordinateOnGrid(6,2);
+            sensorGrid.setCoordinateOnGrid(7,2);
+
+            sensorGrid.setCoordinateOnGrid(5,3);
+            sensorGrid.setCoordinateOnGrid(6,3);
+            sensorGrid.setCoordinateOnGrid(7,3);
+            sensorGrid.setCoordinateOnGrid(8,3);
+
+            sensorGrid.setCoordinateOnGrid(6,4);
+            sensorGrid.setCoordinateOnGrid(7,4);
+            sensorGrid.setCoordinateOnGrid(8,4);
+            sensorGrid.setCoordinateOnGrid(9,4);
+
+            sensorGrid.setCoordinateOnGrid(7,5);
+            sensorGrid.setCoordinateOnGrid(8,5);
+            sensorGrid.setCoordinateOnGrid(9,5);
+            sensorGrid.setCoordinateOnGrid(10,5);
+
+            sensorGrid.setCoordinateOnGrid(8,6);
         }
     }
 })
