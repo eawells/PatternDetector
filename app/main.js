@@ -22,17 +22,25 @@ class SensorGrid {
         for(var col = 0; col < this.columnCount; col++){
             for(var row = 0; row < this.rowCount; row++){
                 if(this.hasCoordinateOnGrid(row,col)){
-                    if(col > maxColumn){
-                       maxColumn = col;
-                    }
-                    if(col < minColumn){
-                        minColumn = col;
-                    }
+                    maxColumn = this.resetMax(col, maxColumn);
+                    minColumn = this.resetMin(col, minColumn);
                 }
             }
         }
+        return (maxColumn - minColumn + 1) <= 3;
+    }
 
-        return (maxColumn - minColumn +1) <= 3;
+    resetMax(col, max) {
+        if(col > max){
+            return col;
+         }
+        return max;
+    }
+    resetMin(col, min) {
+        if(col < min){
+            return col;
+         }
+        return min;
     }
 }
 
