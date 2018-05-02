@@ -49,6 +49,11 @@ describe('sensor grid', () => {
             setPartOnGrid(false);
             expect(sensorGrid.partIsCorrectlyPositioned()).toBeFalsy();
         });
+        it('should return false when width is 8', () => {
+            sensorGrid.setCoordinateOnGrid(0,0);
+            sensorGrid.setCoordinateOnGrid(0,7);
+            expect(sensorGrid.partIsCorrectlyPositioned()).toBeFalsy();
+        });
     });
     function setPartOnGrid(correctPosition){
         if(correctPosition){
