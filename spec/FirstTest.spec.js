@@ -60,7 +60,10 @@ describe('sensor grid', () => {
             sensorGrid.setCoordinateOnGrid(0,0);
             expect(sensorGrid.partIsCorrectlyPositioned()).toBeFalsy();
         });
-
+        it('should be false if inside of bottom margins', () => {
+            sensorGrid.setCoordinateOnGrid(15,0);
+            expect(sensorGrid.partIsCorrectlyPositioned()).toBeFalsy();
+        });
     });
     function setPartOnGrid(correctPosition){
         if(correctPosition){
