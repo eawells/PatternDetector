@@ -20,9 +20,13 @@ class SensorGrid {
     partIsCorrectlyPositioned() {
         var minColumn = this.columnCount - 1;
         var maxColumn = 0;
+        var topMargin = 2;
         for(var row = 0; row < this.rowCount; row++){
             for(var col = 0; col < this.columnCount; col++){
                 if(this.hasCoordinateOnGrid(row,col)){
+                    if(row <= topMargin){
+                        return false;
+                    }
                     maxColumn = col > maxColumn ? col : maxColumn;
                     minColumn = col < minColumn ? col : minColumn;
                 }
