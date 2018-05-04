@@ -1,4 +1,4 @@
-var SensorGrid = require('../app/main.js');
+var SensorGrid = require('../app/sensorGrid.js');
 
 describe('sensor grid', () => {
     let sensorGrid;
